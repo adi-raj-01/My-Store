@@ -1,19 +1,430 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Store</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovely Studio | Wedding Photography & Videography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+    color:#222;
+}
+
+/* Header */
+header{
+    background:#111;
+    color:#fff;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    font-size:1.7rem;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#f8c146;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600') center/cover;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#f8c146;
+    color:#111;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:600;
+    margin:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+/* About */
+.about{
+    background:#f9f9f9;
+    text-align:center;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+}
+
+/* Services */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.service h3{
+    margin:15px 0;
+}
+
+/* Gallery */
+.gallery{
+    background:#f9f9f9;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* Features */
+.features-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    text-align:center;
+}
+
+.feature{
+    padding:25px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Testimonials */
+.testimonials{
+    background:#f9f9f9;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.testimonial{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact-info{
+    margin-top:20px;
+}
+
+.contact-info p{
+    margin:10px 0;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* WhatsApp */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 18px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.hero-content h1{
+    font-size:2.3rem;
+}
+
+.hero-content p{
+    font-size:1rem;
+}
+}
+</style>
 </head>
+
 <body>
 
-    <h1>My Store</h1>
-    <p>Welcome to my online store.</p>
+<header>
+<div class="container">
+<nav>
+<div class="logo">Lovely Studio</div>
 
-    <div class="product">
-        <h2>Product 1</h2>
-        <p>₹499</p>
-        <button>Buy Now</button>
-    </div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Capture Every Moment Beautifully</h1>
+<p>Wedding Photography • Cinematic Videography • Frames • Printing Services</p>
+
+<a href="#contact" class="btn">Book Now</a>
+<a href="#portfolio" class="btn">View Portfolio</a>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="container">
+<h2>About Us</h2>
+
+<p>
+Welcome to Lovely Studio. We specialize in wedding photography,
+cinematic videography, album designing, custom photo frames,
+passport photos, photocopy and printing services.
+Our mission is to preserve your memories with creativity,
+quality and professionalism.
+</p>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service">
+<h3>📸 Wedding Photography</h3>
+<p>Traditional, candid and event photography.</p>
+</div>
+
+<div class="service">
+<h3>🎥 Wedding Videography</h3>
+<p>Cinematic wedding films and event coverage.</p>
+</div>
+
+<div class="service">
+<h3>🖼️ Custom Frames</h3>
+<p>Premium customized photo frames.</p>
+</div>
+
+<div class="service">
+<h3>📚 Album Designing</h3>
+<p>Modern and premium wedding albums.</p>
+</div>
+
+<div class="service">
+<h3>📄 Printing & Photocopy</h3>
+<p>Printing, scanning and photocopy solutions.</p>
+</div>
+
+<div class="service">
+<h3>🪪 Passport Photos</h3>
+<p>Instant passport and ID photos.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="portfolio" class="gallery">
+<div class="container">
+
+<h2>Portfolio</h2>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000" alt="">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1000" alt="">
+<img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1000" alt="">
+<img src="https://images.unsplash.com/photo-1513278974582-3e1b4a4fa21f?q=80&w=1000" alt="">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000" alt="">
+<img src="https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1000" alt="">
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Why Choose Us?</h2>
+
+<div class="features-list">
+
+<div class="feature">✅ Experienced Team</div>
+<div class="feature">✅ High Quality Equipment</div>
+<div class="feature">✅ Affordable Packages</div>
+<div class="feature">✅ Fast Delivery</div>
+<div class="feature">✅ Customer Satisfaction</div>
+<div class="feature">✅ Creative Editing</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="testimonials">
+<div class="container">
+
+<h2>Testimonials</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>
+Excellent photography and videography service.
+Highly recommended.
+</p>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>
+Beautiful wedding album and frame work.
+Amazing experience.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<div class="contact-info">
+<p><strong>Lovely Studio</strong></p>
+<p>📍 Bakshi Ka Talab, Lucknow, Uttar Pradesh</p>
+<p>📞 9919125908</p>
+<p>📞 8400899408</p>
+<p>✉️ lovelystudiobkt@gmail.com</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Lovely Studio. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/919919125908"
+target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
